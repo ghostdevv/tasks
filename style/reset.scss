@@ -1,4 +1,4 @@
-/* Reset CSS https://gist.github.com/robinrendle/1d20c566c5e5fbd67f25 */
+/* Reset CSS Start based on https://gist.github.com/robinrendle/1d20c566c5e5fbd67f25 */
 /*Box sizing (the nuclear option) */
 *,
 *:before,
@@ -187,12 +187,63 @@ button {
     cursor: pointer;
 }
 
-/* (Custom) Extra reset styles */
+/* Custom Reset Styles */
 html,
 body {
     height: 100%;
 }
 
+:root {
+    font-size: 16px;
+}
+
 a {
     text-decoration: none;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.2rem;
+}
+
+h6 {
+    font-size: 0.8rem;
+}
+
+p,
+button {
+    font-size: 1rem;
+}
+
+@media (min-width: 1024px) {
+    :root {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 2000px) {
+    :root {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 2200px) {
+    :root {
+        font-size: 22px;
+    }
 }
