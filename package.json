@@ -2,7 +2,7 @@
     "name": "project-name",
     "private": true,
     "scripts": {
-        "dev": "run-p dev:*",
+        "dev": "cross-env NODE_ENV=development run-p dev:*",
         "dev:routify": "routify",
         "dev:vite": "vite",
         "preview": "vite preview",
