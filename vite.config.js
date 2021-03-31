@@ -10,6 +10,9 @@ export default defineConfig({
         cssCodeSplit: false,
         target: ['es2015'],
     },
+    optimizeDeps: {
+        exclude: ['@roxi/routify'],
+    },
     resolve: {
         alias: [
             {
