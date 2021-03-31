@@ -1,5 +1,4 @@
 import svelte from '@sveltejs/vite-plugin-svelte';
-import autoPreprocess from 'svelte-preprocess';
 import { defineConfig } from 'vite';
 import path from 'path';
 
@@ -19,13 +18,5 @@ export default defineConfig({
             },
         ],
     },
-    plugins: [
-        svelte({
-            preprocess: [
-                autoPreprocess({
-                    postcss: require('./postcss.config.js'),
-                }),
-            ],
-        }),
-    ],
+    plugins: [svelte(require('./svelte.config.js'))],
 });
