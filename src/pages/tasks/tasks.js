@@ -5,12 +5,12 @@ export const tasks = writable('tasks', []);
 
 export const createTask = (name) =>
     tasks.update((tasks) => [
-        ...tasks,
         {
             id: uuid(),
             name,
             date: Date.now(),
         },
+        ...tasks,
     ]);
 
 export const clearTasks = () => tasks.set([]);
