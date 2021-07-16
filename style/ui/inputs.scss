@@ -26,6 +26,13 @@ label {
     @include base;
 }
 
-input[type="text"] {
-    @include text;
+input {
+
+    &.error {
+        border: 2px solid var(--red);
+    }
+
+    &[type="text"] {
+        @include text;
+    }
 }
