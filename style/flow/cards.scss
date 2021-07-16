@@ -19,7 +19,6 @@
     flex-shrink: 1;
 
     &:hover {
-        transform: translateY(-5px);
         border: 4px solid var(--button-highlight);
     }
 }
