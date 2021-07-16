@@ -1,9 +1,12 @@
 button,
 .button {
+    --background: var(--button);
+    --highlight: var(--button-highlight);
+    
     padding: 12px 24px !important;
 
-    background-color: var(--button);
-    border: 1px solid var(--button);
+    background-color: var(--background);
+    border: 1px solid var(--background);
     border-radius: 8px;
     font-weight: 400;
 
@@ -13,9 +16,17 @@ button,
 
     transition: 0.2s ease-in-out;
 
+    &.red {
+        --highlight: var(--red);
+    }
+
+    &.green {
+        --highlight: var(--green)
+    }
+
     &:hover {
-        background-color: var(--button-highlight);
-        border-color: var(--button-highlight);
+        background-color: var(--highlight);
+        border-color: var(--highlight);
         color: var(--text);
     }
 
