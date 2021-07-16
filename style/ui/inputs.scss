@@ -1,0 +1,31 @@
+@use 'style/flow/general';
+
+.input-row {
+    @include general.column;
+    gap: 8px;
+}
+
+label {
+    font-size: 1rem;
+}
+
+@mixin base {
+    padding: 8px 12px;
+    margin: none;
+    
+    font-size: 1.2rem;
+
+    background-color: var(--background);
+    border: 2px solid var(--background);
+    border-radius: 6px;
+
+    width: 100%;
+}
+
+@mixin text {
+    @include base;
+}
+
+input[type="text"] {
+    @include text;
+}
