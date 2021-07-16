@@ -1,6 +1,7 @@
 <script>
     import { tasks, createTask, clearTasks } from './tasks.js';
     import { fly } from 'svelte/transition';
+
     function click() {
         createTask('Test');
     }
