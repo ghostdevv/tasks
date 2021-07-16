@@ -2,6 +2,10 @@
 @import 'style/ui/buttons';
 @import 'style/ui/links';
 
+// Flow
+@import 'style/flow/general';
+@import 'style/flow/cards';
+
 :root {
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
