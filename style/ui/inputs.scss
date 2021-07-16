@@ -27,12 +27,11 @@ label {
 }
 
 input {
-
-    &.error {
-        border: 2px solid var(--red);
-    }
-
     &[type="text"] {
         @include text;
+    }
+    
+    &.error {
+        border: 2px solid var(--red);
     }
 }
