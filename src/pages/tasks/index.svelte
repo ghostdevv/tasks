@@ -1,32 +1,29 @@
 <script>
-    import { tasks, createTask, clearTasks } from './tasks.js';
+    import { tasks, clearTasks } from './tasks.js';
+    import TaskModal from './_TaskModal.svelte';
     import { fly } from 'svelte/transition';
-
-    function click() {
-        createTask('Test');
-    }
 </script>
 
-<div class="controls">
-    <button on:click={click}> Add Task </button>
-    <button on:click={clearTasks}> Clear Task </button>
+<div class="row">
+    <TaskModal>
+        <button slot="activator"> Add Task </button>
+    </TaskModal>
+
+    <button on:click={clearTasks}> Delete all Tasks </button>
 </div>
 
 <div class="tasks">
-    {#each $tasks as task, i (task.id)}
-        <card transition:fly={{ y: -20 }}>
-            {task.name}
-        </card>
+    {#each $tasks as task (task.id)}
+        <TaskModal id={task.id}>
+            <card transition:fly={{ y: -20 }} slot="activator">
+                <h4 style="font-weight: 400;">{task.name}</h4>
+            </card>
+        </TaskModal>
     {/each}
 </div>
 
 <style lang="scss">
     @use 'style/flow/general';
-
-    .controls {
-        display: flex;
-        gap: 12px;
-    }
 
     .tasks {
         @include general.column;
