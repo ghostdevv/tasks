@@ -42,7 +42,7 @@
 
     function refresh() {
         const task = getTask(id);
-        name = task.name;
+        if (task) name = task.name;
     }
 
     $: if (open) refresh();
