@@ -28,3 +28,6 @@ export const updateTask = (id, name) =>
 export const getTask = (id) => get(tasks).find((t) => t.id == id);
 
 export const clearTasks = () => tasks.set([]);
+
+export const deleteTask = (id) =>
+    tasks.update((t) => t.filter((t) => t.id != id));

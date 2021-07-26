@@ -14,7 +14,7 @@
 
 <div class="tasks">
     {#each $tasks as task (task.id)}
-        <TaskModal id={task.id}>
+        <TaskModal id={task.id} existing>
             <card transition:fly={{ y: -20 }} slot="activator">
                 <h4 style="font-weight: 400;">{task.name}</h4>
             </card>

@@ -1,8 +1,10 @@
 <script>
-    import { createTask, updateTask, getTask } from './tasks.js';
+    import { createTask, updateTask, getTask, deleteTask } from './tasks.js';
     import Modal from '@/components/Modal.svelte';
 
     let open;
+
+    export let existing = false;
 
     export let id = undefined;
     let name = '';
@@ -45,6 +47,11 @@
         if (task) name = task.name;
     }
 
+    function del() {
+        open = false;
+        deleteTask(id);
+    }
+
     $: if (open) refresh();
 </script>
 
@@ -75,6 +82,10 @@
             <button class="green" on:click={submit}>
                 {id ? 'Update' : 'Add'}
             </button>
+
+            {#if existing}
+                <button class="red" on:click={del}> Delete </button>
+            {/if}
 
             <button class="red" on:click={() => (open = false)}> Close </button>
         </div>
