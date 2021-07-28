@@ -7,7 +7,14 @@
     function closer() {
         open = false;
     }
+
+    function handleKeydown(event) {
+        const { key } = event;
+        if (key.toLowerCase() == 'escape') closer();
+    }
 </script>
+
+<svelte:window on:keydown={handleKeydown} />
 
 <div class="activator" on:click={() => (open = !open)}>
     <slot name="activator" />

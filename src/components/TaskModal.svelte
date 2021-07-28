@@ -37,11 +37,6 @@
         close();
     }
 
-    function handleKeydown(event) {
-        const { key } = event;
-        if (key.toLowerCase() == 'escape') close();
-    }
-
     function refresh() {
         const task = getTask(id);
         if (task) name = task.name;
@@ -54,8 +49,6 @@
 
     $: if (open) refresh();
 </script>
-
-<svelte:window on:keydown={handleKeydown} />
 
 <div style="display: contents;" on:click={() => (open = true)}>
     <slot name="activator" />
