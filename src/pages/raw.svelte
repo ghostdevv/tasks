@@ -1,5 +1,5 @@
 <script>
-    import { tasks, clearTasks } from '.@/tasks';
+    import { tasks, clearTasks } from '@/tasks';
 </script>
 
 <div class="row">
