@@ -3,7 +3,7 @@
 </script>
 
 <div class="row">
-    <a href="/tasks" class="button">Back</a>
+    <a href="/" class="button">Back</a>
     <button on:click={clearTasks}>Clear</button>
 </div>
 
