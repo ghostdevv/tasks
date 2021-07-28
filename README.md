@@ -1,13 +1,7 @@
-# Routify Template
+# GHOSTs Tasks
+This is a simple webapp that you can use to keep track of tasks! It is based on sending webhooks, you can access it here: https://tasks.ghostdev.xyz
 
-# Install
-Use the [Oxova cli](https://github.com/Oxova/cli)
+# Privacy
+Everything runs locally on your device, there are no servers. This does mean you can't sync tasks between devices however this is done so there is no cost to running the app nor any potential privacy concerns.
 
-# Commands
-Run the command with `npm run <command>`, for example `npm run dev`.<br />
-
-|Command | Description|
---- | ---
-|Dev | Run the dev server|
-|Build | Build the site|
-|Preview | Preview the site|
+Webhooks you add are your responsibility to secure, I'd recommend creating a Discord server only you have access to.
