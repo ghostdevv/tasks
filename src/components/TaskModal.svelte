@@ -1,5 +1,5 @@
 <script>
-    import { createTask, updateTask, getTask, deleteTask } from './tasks.js';
+    import { createTask, updateTask, getTask, deleteTask } from '@/tasks.js';
     import Modal from '@/components/Modal.svelte';
 
     let open;
