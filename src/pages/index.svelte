@@ -1,6 +1,7 @@
 <script>
+    import DeleteButton from '@/components/DeleteButton.svelte';
+    import { tasks, clearTasks, deleteTask } from '@/tasks.js';
     import TaskModal from '@/components/TaskModal.svelte';
-    import { tasks, clearTasks } from '@/tasks.js';
     import { fly } from 'svelte/transition';
 </script>
 
@@ -20,6 +21,7 @@
                 out:fly|local={{ y: -20 }}
                 slot="activator">
                 <h4 style="font-weight: 400;">{task.name}</h4>
+                <DeleteButton on:click={() => deleteTask(task.id)} />
             </card>
         </TaskModal>
     {/each}
@@ -33,6 +35,8 @@
 
         card {
             cursor: pointer;
+            flex-direction: row;
+            justify-content: space-between;
         }
     }
 </style>
