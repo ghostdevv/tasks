@@ -17,3 +17,11 @@
         <Task {...task} {i} />
     {/each}
 </div>
+
+<style>
+    .tasks {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+</style>
