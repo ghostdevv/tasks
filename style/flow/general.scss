@@ -38,7 +38,7 @@ $gap: 12px;
     }
 }
 
-.column {
+.col {
     @include column;
     @include subs;
 }
