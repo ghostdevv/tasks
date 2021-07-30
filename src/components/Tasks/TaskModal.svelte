@@ -31,7 +31,7 @@
     function submit() {
         if (!validate()) return;
 
-        if (id) updateTask(id, name);
+        if (id) updateTask(id, { name });
         else createTask(name);
 
         close();

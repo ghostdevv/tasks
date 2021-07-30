@@ -9,16 +9,17 @@ export const createTask = (name) =>
         {
             id: uuid(),
             name,
+            completed: false,
             date: Date.now(),
         },
         ...tasks,
     ]);
 
-export const updateTask = (id, name) =>
+export const updateTask = (id, v) =>
     tasks.update((tasks) =>
         tasks.map((t) => {
             if (t.id == id) {
-                t.name = name;
+                t = { ...t, ...v };
             }
 
             return t;
