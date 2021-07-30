@@ -23,7 +23,7 @@
 {#if open}
     <div class="modal-backdrop" in:fade />
 
-    <modal use:clickOutside={closer}>
+    <modal use:clickOutside={closer} in:fade>
         <slot />
     </modal>
 {/if}
