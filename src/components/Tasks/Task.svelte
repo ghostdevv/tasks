@@ -1,5 +1,5 @@
 <script>
-    import DeleteButton from '@/components/DeleteButton.svelte';
+    import DeleteButton from '@/components/UI/DeleteButton.svelte';
     import TaskModal from '@/components/Tasks/TaskModal.svelte';
     import { deleteTask } from '@/tasks.js';
     import { fly } from 'svelte/transition';
