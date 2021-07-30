@@ -21,7 +21,7 @@
 
 <TaskModal {id} existing>
     <task
-        in:fly={{ y: -20, delay: 150 * i }}
+        in:fly={{ y: -20, delay: 125 * i }}
         out:fly|local={{ y: -20 }}
         slot="activator"
         class:completed>
