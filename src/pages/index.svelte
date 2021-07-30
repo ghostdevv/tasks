@@ -1,6 +1,6 @@
 <script>
-    import { tasks, clearTasks } from '@/tasks.js';
     import TaskModal from '@/components/TaskModal.svelte';
+    import { tasks, clearTasks } from '@/tasks.js';
     import { fly } from 'svelte/transition';
 </script>
 
