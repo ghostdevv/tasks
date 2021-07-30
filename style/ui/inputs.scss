@@ -1,7 +1,7 @@
 @use 'style/flow/general';
 
 .input-row {
-    @include general.column;
+    @include general.col;
     gap: 8px;
 }
 

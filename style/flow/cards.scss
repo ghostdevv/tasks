@@ -12,7 +12,7 @@
 
     transition: transform 0.2s ease-in-out;
     
-    @include general.column;
+    @include general.col;
     
     align-self: stretch;
     flex-grow: 1;
