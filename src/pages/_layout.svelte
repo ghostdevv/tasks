@@ -1,13 +1,32 @@
-<div class="wrapper">
+<script>
+    import Dev from '@/components/Dev.svelte';
+</script>
+
+<div class="controls">
+    <Dev />
+</div>
+
+<div class="slot">
     <slot />
 </div>
 
-<style>
-    .wrapper {
+<style lang="scss">
+    .controls {
+        position: fixed;
+        z-index: 10000;
+        bottom: 0;
+
+        width: 100%;
+    }
+
+    .slot {
         display: flex;
         flex-direction: column;
-        gap: 16px;
 
-        padding: 16px;
+        padding: 0px 16px;
+        position: relative;
+
+        width: 100%;
+        height: 100%;
     }
 </style>
