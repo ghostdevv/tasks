@@ -13,9 +13,12 @@
 </div>
 
 <div class="tasks">
-    {#each $tasks as task (task.id)}
+    {#each $tasks as task, i (task.id)}
         <TaskModal id={task.id} existing>
-            <card transition:fly|local={{ y: -20 }} slot="activator">
+            <card
+                in:fly={{ y: -20, delay: 150 * i }}
+                out:fly|local={{ y: -20 }}
+                slot="activator">
                 <h4 style="font-weight: 400;">{task.name}</h4>
             </card>
         </TaskModal>
