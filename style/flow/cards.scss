@@ -33,9 +33,17 @@
     }
 }
 
+@mixin click {
+    cursor: pointer;
+}
+
 card,
 .card {
     @include card;
+
+    &.click {
+        @include click;
+    }
 
     &.blue {
         @include blue;
