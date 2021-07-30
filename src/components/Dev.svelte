@@ -5,7 +5,7 @@
 
     function addRandomTasks() {
         for (let x = 0; x < 5; x++)
-            createTask(Date.now(), { checked: Math.random() >= 0.5 });
+            createTask(Date.now(), { completed: Math.random() >= 0.5 });
     }
 </script>
 
