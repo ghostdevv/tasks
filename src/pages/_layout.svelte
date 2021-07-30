@@ -7,7 +7,7 @@
     <banner
         class="green"
         style="justify-content: space-between;"
-        transition:slide>
+        transition:slide|local>
         <p>Dev mode enabled</p>
 
         <div class="row buttons">
