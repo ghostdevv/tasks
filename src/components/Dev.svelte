@@ -1,6 +1,6 @@
 <script>
+    import { createTask, tasks } from '@/tasks';
     import { fly } from 'svelte/transition';
-    import { createTask } from '@/tasks';
     import { dev } from '@/config.js';
 
     function addRandomTasks() {
@@ -11,6 +11,10 @@
                 x * 200,
             );
         }
+    }
+
+    function shuffleTasks() {
+        $tasks = $tasks.sort(() => Math.random() - 0.5);
     }
 </script>
 
@@ -26,6 +30,10 @@
 
             <button on:click={addRandomTasks} class="small">
                 Random Tasks
+            </button>
+
+            <button on:click={shuffleTasks} class="small">
+                Shuffle Tasks
             </button>
         </div>
     </banner>
