@@ -1,9 +1,3 @@
-<script>
-    import Dev from '@/components/Dev.svelte';
-</script>
-
-<Dev />
-
 <div class="wrapper">
     <slot />
 </div>

@@ -1,9 +1,12 @@
 <script>
     import { routes } from '../.routify/routes';
+    import Dev from '@/components/Dev.svelte';
     import { hotkeys } from 'svelte-hotkeys';
     import { Router } from '@roxi/routify';
     import { dev } from '@/config.js';
 </script>
+
+<Dev />
 
 <Router {routes} />
 
