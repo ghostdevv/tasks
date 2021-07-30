@@ -12,16 +12,8 @@
     <button on:click={clearTasks}> Delete all Tasks </button>
 </div>
 
-<div class="tasks">
+<div class="col g16">
     {#each $tasks as task, i (task.id)}
         <Task {...task} {i} />
     {/each}
 </div>
-
-<style>
-    .tasks {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
-</style>
