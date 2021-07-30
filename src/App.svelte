@@ -1,7 +1,7 @@
 <script>
     import { routes } from '../.routify/routes';
-    import { Router } from '@roxi/routify';
     import { hotkeys } from 'svelte-hotkeys';
+    import { Router } from '@roxi/routify';
     import { dev } from '@/config.js';
 </script>
 
