@@ -9,6 +9,6 @@
 
 <svelte:window
     use:hotkeys={{
-        keys: 'ctrl+alt+d',
+        keys: 'ctrl+alt+d,command+alt+d',
         handler: () => ($dev = !$dev),
     }} />
