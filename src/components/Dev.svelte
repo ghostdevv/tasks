@@ -4,12 +4,11 @@
     import { dev } from '@/config.js';
 
     function addRandomTasks() {
+        const create = () =>
+            createTask(Date.now(), { completed: Math.random() >= 0.5 });
+
         for (let x = 0; x < 5; x++) {
-            setTimeout(
-                () =>
-                    createTask(Date.now(), { completed: Math.random() >= 0.5 }),
-                x * 200,
-            );
+            setTimeout(create, x * 200);
         }
     }
 
