@@ -1,5 +1,5 @@
 <script>
-    import { slide } from 'svelte/transition';
+    import { fly } from 'svelte/transition';
     import { createTask } from '@/tasks';
     import { dev } from '@/config.js';
 
@@ -18,7 +18,7 @@
     <banner
         class="green"
         style="justify-content: space-between;"
-        transition:slide|local>
+        transition:fly|local={{ y: 40 }}>
         <p>Dev mode enabled</p>
 
         <div class="row buttons">
