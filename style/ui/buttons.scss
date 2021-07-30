@@ -26,9 +26,19 @@
     }
 }
 
+@mixin small() {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 8px 20px !important;
+}
+
 button,
 .button {
     @include button;
+
+    &.small {
+        @include small;
+    }
 
     &.red {
         --highlight: var(--red);
