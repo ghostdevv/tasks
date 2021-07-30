@@ -1,7 +1,7 @@
 <script>
     import DeleteButton from '@/components/DeleteButton.svelte';
-    import TaskModal from '@/components/TaskModal.svelte';
-    import { getTask, deleteTask } from '@/tasks.js';
+    import TaskModal from '@/components/Tasks/TaskModal.svelte';
+    import { deleteTask } from '@/tasks.js';
     import { fly } from 'svelte/transition';
 
     export let id;

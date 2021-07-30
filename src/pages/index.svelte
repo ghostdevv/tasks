@@ -1,7 +1,7 @@
 <script>
-    import TaskModal from '@/components/TaskModal.svelte';
+    import TaskModal from '@/components/Tasks/TaskModal.svelte';
+    import Task from '@/components/Tasks/Task.svelte';
     import { tasks, clearTasks } from '@/tasks.js';
-    import Task from '@/components/Task.svelte';
 </script>
 
 <div class="row">
