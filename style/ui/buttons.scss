@@ -1,5 +1,4 @@
-button,
-.button {
+@mixin button {
     --background: var(--button);
     --highlight: var(--button-highlight);
     
@@ -16,14 +15,6 @@ button,
 
     transition: 0.2s ease-in-out;
 
-    &.red {
-        --highlight: var(--red);
-    }
-
-    &.green {
-        --highlight: var(--green)
-    }
-
     &:hover {
         background-color: var(--highlight);
         border-color: var(--highlight);
@@ -32,5 +23,18 @@ button,
 
     &:focus {
         transition: none;
+    }
+}
+
+button,
+.button {
+    @include button;
+
+    &.red {
+        --highlight: var(--red);
+    }
+
+    &.green {
+        --highlight: var(--green)
     }
 }
