@@ -4,13 +4,13 @@
 
     export let open = false;
 
-    function closer() {
+    function close() {
         open = false;
     }
 
     function handleKeydown(event) {
         const { key } = event;
-        if (key.toLowerCase() == 'escape') closer();
+        if (key.toLowerCase() == 'escape') close();
     }
 </script>
 
@@ -23,8 +23,8 @@
 {#if open}
     <div class="modal-backdrop" in:fade />
 
-    <modal use:clickOutside={closer} in:fade>
-        <slot />
+    <modal use:clickOutside={close} in:fade>
+        <slot close={() => close()} />
     </modal>
 {/if}
 

@@ -1,7 +1,9 @@
 <script>
+    import DeleteButton from '@/components/UI/DeleteButton.svelte';
     import TaskModal from '@/components/Tasks/TaskModal.svelte';
     import Task from '@/components/Tasks/Task.svelte';
     import { tasks, clearTasks } from '@/tasks.js';
+    import Modal from '@/components/Modal.svelte';
 </script>
 
 <div class="row controls">
@@ -9,7 +11,27 @@
         <button slot="activator"> Add Task </button>
     </TaskModal>
 
-    <button on:click={clearTasks}> Delete all Tasks </button>
+    <Modal let:close>
+        <DeleteButton slot="activator" />
+
+        <card class="col g32 center no-hover">
+            <h4>
+                Are you sure you want to
+                <strong style="color: var(--red)"> delete all tasks </strong>
+            </h4>
+
+            <div class="row center">
+                <button
+                    class="green"
+                    on:click={() => {
+                        clearTasks();
+                        close();
+                    }}>Yes</button>
+
+                <button class="red" on:click={close}>No</button>
+            </div>
+        </card>
+    </Modal>
 </div>
 
 <div class="col g16 tasks">
@@ -23,6 +45,9 @@
         position: sticky;
         z-index: 10000;
         top: 0;
+
+        align-items: center;
+        justify-content: space-between;
 
         background-color: var(--background);
         padding: 22px 0px;
