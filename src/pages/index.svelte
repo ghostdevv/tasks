@@ -4,12 +4,24 @@
     import Task from '@/components/Tasks/Task.svelte';
     import { tasks, clearTasks } from '@/tasks.js';
     import Modal from '@/components/Modal.svelte';
+
+    let completedShown;
+
+    $: displayTasks = $tasks.filter((t) =>
+        completedShown ? !t.completed : true,
+    );
 </script>
 
 <div class="row controls">
-    <TaskModal>
-        <button slot="activator"> Add Task </button>
-    </TaskModal>
+    <div class="row g16" style="align-items: center;">
+        <TaskModal>
+            <button slot="activator"> Add Task </button>
+        </TaskModal>
+
+        <button on:click={() => (completedShown = !completedShown)}>
+            {completedShown ? 'Show' : 'Hide'} completed
+        </button>
+    </div>
 
     <Modal let:close>
         <DeleteButton slot="activator" />
@@ -35,7 +47,7 @@
 </div>
 
 <div class="col g16 tasks">
-    {#each $tasks as task, i (task.id)}
+    {#each displayTasks as task, i (task.id)}
         <Task {...task} {i} />
     {/each}
 </div>
