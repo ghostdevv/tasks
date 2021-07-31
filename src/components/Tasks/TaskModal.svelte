@@ -32,9 +32,9 @@
         if (!validate()) return;
 
         if (id) updateTask(id, { name });
-        else createTask(name);
 
         close();
+        createTask(name);
     }
 
     function refresh() {
@@ -54,7 +54,7 @@
     <slot name="activator" />
 </div>
 
-<Modal bind:open>
+<Modal bind:open let:close>
     <card class="no-hover col" style="gap: 22px;">
         <h4>Add Task</h4>
 
@@ -80,7 +80,7 @@
                 <button class="red" on:click={del}> Delete </button>
             {/if}
 
-            <button class="red" on:click={() => (open = false)}> Close </button>
+            <button class="red" on:click={close}> Close </button>
         </div>
     </card>
 </Modal>
