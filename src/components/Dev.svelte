@@ -18,11 +18,18 @@
 </script>
 
 {#if $dev}
-    <banner
-        class="green"
-        style="justify-content: space-between;"
-        transition:fly|local={{ y: 40 }}>
-        <p>Dev mode enabled</p>
+    <banner class="green" transition:fly|local={{ y: 40 }}>
+        <div class="row">
+            <p>Dev mode enabled</p>
+
+            <p>|</p>
+
+            <p>
+                <a href="https://github.com/ghostdevv/tasks" target="_blank">
+                    Github
+                </a>
+            </p>
+        </div>
 
         <div class="row buttons">
             <a href="/raw" class="button small">Raw</a>
@@ -39,9 +46,15 @@
 {/if}
 
 <style>
+    banner {
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .buttons {
         display: flex;
         justify-content: flex-end;
+        align-items: center;
         flex-shrink: 1;
         width: max-content;
     }
