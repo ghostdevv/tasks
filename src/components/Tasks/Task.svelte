@@ -24,7 +24,8 @@
         in:fly={{ y: -20, delay: 125 * i }}
         out:fly|local={{ y: -20 }}
         slot="activator"
-        class:completed>
+        class:completed
+        class="card click">
         <Checkmark on:click={toggleComplete} active={completed} />
 
         <h4 class="name">{name}</h4>
@@ -38,12 +39,7 @@
 </TaskModal>
 
 <style lang="scss">
-    @use 'style/flow/cards';
-
     task {
-        @include cards.card;
-        @include cards.click;
-
         display: grid;
         grid-template-columns: max-content 1fr max-content;
         grid-template-rows: 1fr;
