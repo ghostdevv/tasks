@@ -22,27 +22,31 @@
         </button>
     </div>
 
-    <Modal let:close>
-        <DeleteButton slot="activator" />
+    {#if $tasks.length > 0}
+        <Modal let:close>
+            <DeleteButton slot="activator" />
 
-        <card class="col g32 center no-hover">
-            <h4>
-                Are you sure you want to
-                <strong style="color: var(--red)"> delete all tasks </strong>
-            </h4>
+            <card class="col g32 center no-hover">
+                <h4>
+                    Are you sure you want to
+                    <strong style="color: var(--red)">
+                        delete all tasks
+                    </strong>
+                </h4>
 
-            <div class="row center">
-                <button
-                    class="green"
-                    on:click={() => {
-                        clearTasks();
-                        close();
-                    }}>Yes</button>
+                <div class="row center">
+                    <button
+                        class="green"
+                        on:click={() => {
+                            clearTasks();
+                            close();
+                        }}>Yes</button>
 
-                <button class="red" on:click={close}>No</button>
-            </div>
-        </card>
-    </Modal>
+                    <button class="red" on:click={close}>No</button>
+                </div>
+            </card>
+        </Modal>
+    {/if}
 </div>
 
 <div class="col g16 tasks">
