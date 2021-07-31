@@ -48,6 +48,7 @@
         min-width: 280px;
         width: 100%;
         max-width: 800px;
+        padding: 0px 16px;
     }
 
     .modal-backdrop {
