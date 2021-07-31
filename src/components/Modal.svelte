@@ -4,27 +4,31 @@
 
     export let open = false;
 
-    function close() {
+    function closer() {
         open = false;
+    }
+
+    function opener() {
+        open = true;
     }
 
     function handleKeydown(event) {
         const { key } = event;
-        if (key.toLowerCase() == 'escape') close();
+        if (key.toLowerCase() == 'escape') closer();
     }
 </script>
 
 <svelte:window on:keydown={handleKeydown} />
 
-<div class="activator" on:click={() => (open = !open)}>
+<div class="activator" on:click={opener}>
     <slot name="activator" />
 </div>
 
 {#if open}
     <div class="modal-backdrop" in:fade />
 
-    <modal use:clickOutside={close} in:fade>
-        <slot close={() => close()} />
+    <modal use:clickOutside={closer} in:fade>
+        <slot close={closer} open={opener} />
     </modal>
 {/if}
 
