@@ -19,7 +19,7 @@
 
 {#if $dev}
     <banner class="green" transition:fly|local={{ y: 40 }}>
-        <div class="row">
+        <div class="row max">
             <p>Dev mode enabled</p>
 
             <p>|</p>
@@ -31,7 +31,7 @@
             </p>
         </div>
 
-        <div class="row buttons">
+        <div class="row buttons max">
             <a href="/raw" class="button small">Raw</a>
 
             <button on:click={addRandomTasks} class="small">
@@ -51,11 +51,14 @@
         align-items: center;
     }
 
+    .max {
+        width: max-content;
+    }
+
     .buttons {
         display: flex;
         justify-content: flex-end;
         align-items: center;
         flex-shrink: 1;
-        width: max-content;
     }
 </style>
