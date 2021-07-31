@@ -50,11 +50,9 @@
     $: if (open) refresh();
 </script>
 
-<div style="display: contents;" on:click={() => (open = true)}>
-    <slot name="activator" />
-</div>
-
 <Modal bind:open let:close>
+    <slot slot="activator" name="activator" />
+
     <card class="no-hover col" style="gap: 22px;">
         <h4>Add Task</h4>
 
