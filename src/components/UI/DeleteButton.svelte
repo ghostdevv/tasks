@@ -19,13 +19,15 @@
     </g>
 </svg>
 
-<style>
+<style lang="scss">
     svg {
         color: var(--text);
+        cursor: pointer;
         transition: color 0.2s;
-    }
-    svg:hover {
-        color: var(--red);
-        pointer-events: all;
+
+        &:hover {
+            color: var(--red);
+            pointer-events: all;
+        }
     }
 </style>
