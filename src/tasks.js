@@ -4,14 +4,13 @@ import { get } from 'svelte/store';
 
 export const tasks = writable('tasks', []);
 
-export const createTask = (name, overrides = {}) =>
+export const createTask = (task = {}) =>
     tasks.update((tasks) => [
         {
             id: uuid(),
-            name,
             completed: false,
             date: Date.now(),
-            ...overrides,
+            ...task,
         },
         ...tasks,
     ]);

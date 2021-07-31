@@ -20,7 +20,7 @@
     function validate() {
         nameError = false;
 
-        if (name.length == 0) {
+        if (name.length == 0 || name.trim() == '') {
             nameError = true;
             return false;
         }
@@ -31,10 +31,14 @@
     function submit() {
         if (!validate()) return;
 
-        if (id) updateTask(id, { name });
+        const task = {
+            name: name.trim(),
+        };
 
         close();
-        createTask(name);
+
+        if (id) updateTask(id, task);
+        else createTask(task);
     }
 
     function refresh() {
