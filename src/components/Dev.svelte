@@ -5,10 +5,7 @@
 
     function addRandomTasks() {
         const create = () =>
-            createTask(
-                { name: Date.now() },
-                { completed: Math.random() >= 0.5 },
-            );
+            createTask({ name: Date.now(), completed: Math.random() >= 0.5 });
 
         for (let x = 0; x < 5; x++) {
             setTimeout(create, x * 200);
