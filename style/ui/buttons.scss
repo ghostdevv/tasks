@@ -1,3 +1,5 @@
+@import 'style/helpers/media';
+
 @mixin button {
     --background: var(--button);
     --highlight: var(--button-highlight);
@@ -23,6 +25,10 @@
 
     &:focus {
         transition: none;
+    }
+
+    @include media('<768px') {
+        @include small;
     }
 }
 
