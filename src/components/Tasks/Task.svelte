@@ -29,7 +29,11 @@
 
         <h4 class="name">{name}</h4>
 
-        <DeleteButton on:click={() => deleteTask(id)} />
+        <DeleteButton
+            on:click={(e) => {
+                e.stopPropagation();
+                deleteTask(id);
+            }} />
     </task>
 </TaskModal>
 
