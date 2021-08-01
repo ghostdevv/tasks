@@ -11,14 +11,6 @@
 </div>
 
 <style lang="scss">
-    .controls {
-        position: fixed;
-        z-index: 10000;
-        bottom: 0;
-
-        width: 100%;
-    }
-
     .slot {
         display: flex;
         flex-direction: column;
