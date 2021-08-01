@@ -38,7 +38,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: 10000;
+        z-index: 15000;
 
         width: max-content;
 
@@ -56,7 +56,7 @@
         top: 0;
         left: 0;
 
-        z-index: 9000;
+        z-index: 14000;
 
         width: 100%;
         height: 100%;
