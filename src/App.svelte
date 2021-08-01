@@ -1,19 +1,24 @@
 <script>
     import { routes } from '../.routify/routes';
+    import { slide } from 'svelte/transition';
     import Dev from '@/components/Dev.svelte';
     import { hotkeys } from 'svelte-hotkeys';
     import { Router } from '@roxi/routify';
     import { dev } from '@/config.js';
+
+    let online = true;
 </script>
 
 <Router {routes} />
 
 <div class="banners col">
-    <banner class="red">
-        <p>
-            <strong>You are offline</strong>
-        </p>
-    </banner>
+    {#if !online}
+        <banner class="red" transition:slide|local>
+            <p>
+                <strong>You are offline</strong>
+            </p>
+        </banner>
+    {/if}
 
     <Dev />
 </div>
@@ -22,7 +27,8 @@
     use:hotkeys={{
         keys: 'ctrl+alt+d,command+alt+d',
         handler: () => ($dev = !$dev),
-    }} />
+    }}
+    bind:online />
 
 <style>
     .banners {
