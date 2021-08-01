@@ -11,12 +11,24 @@
 
         <title>Tasks</title>
 
+        <!-- PWA -->
+        <link rel="manifest" href="/manifest.json">
+
         <!-- Meta -->
         <meta name="theme-color" content="#2885d6" />
     </head>
 
     <body>
         <noscript>Please enable Javascript for this site to function.</noscript>
+
+        <!-- Vite -->
         <script type="module" src="/src/main.js"></script>
+        
+        <!-- Service Worker -->
+        <script>
+			if ('serviceWorker' in navigator) {
+				navigator.serviceWorker.register('/service-worker.js');
+			};
+		</script>
     </body>
 </html>
