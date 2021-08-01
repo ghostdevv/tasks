@@ -1,7 +1,7 @@
 <script>
-    import DeleteButton from '@/components/UI/DeleteButton.svelte';
+    import DeleteButton from '@/components/icons/DeleteButton.svelte';
     import TaskModal from '@/components/Tasks/TaskModal.svelte';
-    import Checkmark from '@/components/UI/Checkmark.svelte';
+    import Checkmark from '@/components/icons/Checkmark.svelte';
     import { deleteTask, updateTask } from '@/tasks.js';
     import { fly } from 'svelte/transition';
 

@@ -1,5 +1,5 @@
 <script>
-    import DeleteButton from '@/components/UI/DeleteButton.svelte';
+    import DeleteButton from '@/components/icons/DeleteButton.svelte';
     import TaskModal from '@/components/Tasks/TaskModal.svelte';
     import Task from '@/components/Tasks/Task.svelte';
     import { tasks, clearTasks } from '@/tasks.js';
