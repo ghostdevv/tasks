@@ -4,5 +4,14 @@ importScripts(
 
 workbox.routing.registerRoute(
     ({ request }) => request.destination === 'image',
-    new workbox.strategies.NetworkFirst(),
+    new workbox.strategies.CacheFirst({
+        cacheName: 'images',
+    }),
+);
+
+workbox.routing.registerRoute(
+    ({ request }) => request.destination === 'document',
+    new workbox.strategies.CacheFirst({
+        cacheName: 'document',
+    }),
 );
