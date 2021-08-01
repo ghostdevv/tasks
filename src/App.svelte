@@ -11,7 +11,7 @@
 
 <Router {routes} />
 
-<div class="banners col">
+<div class="banners col" style="gap: 0px;">
     {#if !online}
         <banner class="red" transition:slide|local>
             <p>
