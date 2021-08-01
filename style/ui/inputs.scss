@@ -28,6 +28,20 @@ label {
     @include base;
 }
 
+textarea {
+    @include text;
+
+    min-width: 100%;
+    max-width: 100%;
+
+    height: 150px;
+    max-height: 250px; 
+
+    &.error {
+        border: 2px solid var(--red);
+    }
+}
+
 input {
     &[type="text"] {
         @include text;
