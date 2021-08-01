@@ -23,7 +23,7 @@ export default defineConfig({
         ],
     },
     plugins: [
-        svelte(require('./svelte.config.js')),
+        svelte(),
         VitePWA({
             registerType: 'autoUpdate',
             manifest: {
