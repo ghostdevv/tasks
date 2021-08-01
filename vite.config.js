@@ -25,6 +25,7 @@ export default defineConfig({
     plugins: [
         svelte(require('./svelte.config.js')),
         VitePWA({
+            registerType: 'autoUpdate',
             manifest: {
                 name: 'Tasks',
                 short_name: 'Tasks',
