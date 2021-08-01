@@ -64,7 +64,7 @@
     <slot slot="activator" name="activator" />
 
     <card class="no-hover col" style="gap: 22px;">
-        <h4>Add Task</h4>
+        <h4>{id ? 'Update' : 'Add'} Task</h4>
 
         <div class="col">
             <div class="input-row">
