@@ -7,7 +7,9 @@
     export let existing = false;
 
     export let id = undefined;
+
     let name = '';
+    let description = '';
 
     let nameError;
 
@@ -33,6 +35,7 @@
 
         const task = {
             name: name.trim(),
+            description: description.trim(),
         };
 
         close();
@@ -43,7 +46,10 @@
 
     function refresh() {
         const task = getTask(id);
-        if (task) name = task.name;
+        if (task) {
+            name = task.name;
+            description = task.description;
+        }
     }
 
     function del() {
@@ -60,7 +66,7 @@
     <card class="no-hover col" style="gap: 22px;">
         <h4>Add Task</h4>
 
-        <div>
+        <div class="col">
             <div class="input-row">
                 <label for="name">Name</label>
 
@@ -70,6 +76,16 @@
                     placeholder="Name"
                     class:error={nameError}
                     bind:value={name} />
+            </div>
+
+            <div class="input-row">
+                <label for="description">Description</label>
+
+                <textarea
+                    name="description"
+                    id="description"
+                    bind:value={description}
+                    placeholder="More information about task (optional)" />
             </div>
         </div>
 
