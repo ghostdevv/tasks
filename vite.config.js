@@ -32,7 +32,7 @@ export default defineConfig({
                 start_url: '/',
                 theme_color: '#2885d6',
                 background_color: '#1e1e1e',
-                display: 'fullscreen',
+                display: 'standalone',
                 icons: [
                     {
                         src: 'icons/manifest-icon-192.png',
