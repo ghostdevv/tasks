@@ -23,7 +23,10 @@
         prompt.prompt();
 
         prompt.userChoice.then(({ outcome }) => {
-            if (outcome == 'accepted') open = false;
+            if (outcome == 'accepted') {
+                open = false;
+                $installPWAModal = Date.now();
+            }
         });
     }
 </script>
