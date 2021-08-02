@@ -1,4 +1,5 @@
 <script>
+    import InstallPWAModal from '@/components/InstallPWAModal.svelte';
     import { routes } from '../.routify/routes';
     import { slide } from 'svelte/transition';
     import Dev from '@/components/Dev.svelte';
@@ -8,6 +9,8 @@
 
     let online = true;
 </script>
+
+<InstallPWAModal />
 
 <Router {routes} />
 
