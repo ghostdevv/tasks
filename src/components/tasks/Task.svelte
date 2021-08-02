@@ -1,6 +1,6 @@
 <script>
+    import ExistingTask from '@/components/tasks/modals/ExistingTask.svelte';
     import DeleteButton from '@/components/icons/DeleteButton.svelte';
-    import TaskModal from '@/components/tasks/TaskModal.svelte';
     import Checkmark from '@/components/icons/Checkmark.svelte';
     import { deleteTask, updateTask } from '@/tasks.js';
     import { fly } from 'svelte/transition';
@@ -19,7 +19,7 @@
     }
 </script>
 
-<TaskModal {id} existing>
+<ExistingTask {id}>
     <task
         in:fly={{ y: -20, delay: 125 * i }}
         out:fly|local={{ y: -20 }}
@@ -36,7 +36,7 @@
                 deleteTask(id);
             }} />
     </task>
-</TaskModal>
+</ExistingTask>
 
 <style lang="scss">
     task {

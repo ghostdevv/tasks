@@ -1,6 +1,6 @@
 <script>
     import DeleteButton from '@/components/icons/DeleteButton.svelte';
-    import TaskModal from '@/components/tasks/TaskModal.svelte';
+    import NewTask from '@/components/tasks/modals/NewTask.svelte';
     import Task from '@/components/tasks/Task.svelte';
     import { tasks, clearTasks } from '@/tasks.js';
     import { showCompletedTasks } from '@/config';
@@ -13,9 +13,9 @@
 
 <div class="row controls">
     <div class="row g16" style="align-items: center;">
-        <TaskModal>
+        <NewTask>
             <button slot="activator"> Add Task </button>
-        </TaskModal>
+        </NewTask>
 
         <button on:click={() => ($showCompletedTasks = !$showCompletedTasks)}>
             {$showCompletedTasks ? 'Show' : 'Hide'} completed
