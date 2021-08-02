@@ -11,10 +11,6 @@
             setTimeout(create, x * 200);
         }
     }
-
-    function shuffleTasks() {
-        $tasks = $tasks.sort(() => Math.random() - 0.5);
-    }
 </script>
 
 {#if $dev}
@@ -36,10 +32,6 @@
 
             <button on:click={addRandomTasks} class="small">
                 Random Tasks
-            </button>
-
-            <button on:click={shuffleTasks} class="small">
-                Shuffle Tasks
             </button>
         </div>
     </banner>
