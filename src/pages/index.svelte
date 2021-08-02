@@ -1,7 +1,7 @@
 <script>
     import DeleteButton from '@/components/icons/DeleteButton.svelte';
-    import TaskModal from '@/components/Tasks/TaskModal.svelte';
-    import Task from '@/components/Tasks/Task.svelte';
+    import TaskModal from '@/components/tasks/TaskModal.svelte';
+    import Task from '@/components/tasks/Task.svelte';
     import { tasks, clearTasks } from '@/tasks.js';
     import { showCompletedTasks } from '@/config';
     import Modal from '@/components/Modal.svelte';
