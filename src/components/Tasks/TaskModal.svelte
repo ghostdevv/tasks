@@ -15,8 +15,6 @@
 
     function close() {
         open = false;
-        name = '';
-        id = undefined;
     }
 
     function validate() {
