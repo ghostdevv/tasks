@@ -21,6 +21,10 @@
 
     function install() {
         prompt.prompt();
+
+        prompt.userChoice.then(({ outcome }) => {
+            if (outcome == 'accepted') open = false;
+        });
     }
 </script>
 
