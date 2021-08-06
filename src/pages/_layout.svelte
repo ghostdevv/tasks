@@ -7,7 +7,9 @@
         display: flex;
         flex-direction: column;
 
-        padding: 0px 16px;
+        padding: 16px;
+        padding-top: 0px;
+
         position: relative;
 
         width: 100%;
