@@ -1,5 +1,5 @@
 <script>
-    import Modal from '@/components/Modal.svelte';
+    import { Modal } from 'polykit';
     import Inputs from './Inputs.svelte';
 
     import { createTask } from '@/tasks.js';

@@ -1,5 +1,5 @@
 <script>
-    import Modal from '@/components/Modal.svelte';
+    import { Modal } from 'polykit';
     import { installPWAModal } from '@/config';
 
     let open = false;

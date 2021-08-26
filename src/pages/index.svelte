@@ -4,7 +4,7 @@
     import Task from '@/components/tasks/Task.svelte';
     import { tasks, clearTasks } from '@/tasks.js';
     import { showCompletedTasks } from '@/config';
-    import Modal from '@/components/Modal.svelte';
+    import { Modal } from 'polykit';
 
     $: displayTasks = $tasks.filter((t) =>
         $showCompletedTasks ? !t.completed : true,
