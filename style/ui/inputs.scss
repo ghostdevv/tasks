@@ -24,12 +24,8 @@ label {
     color: var(--text);
 }
 
-@mixin text {
-    @include base;
-}
-
 textarea {
-    @include text;
+    @include base;
 
     min-width: 100%;
     max-width: 100%;
@@ -44,7 +40,7 @@ textarea {
 
 input {
     &[type="text"] {
-        @include text;
+        @include base;
     }
     
     &.error {
