@@ -7,10 +7,6 @@ export default defineConfig({
     server: {
         port: 5000,
     },
-    build: {
-        cssCodeSplit: false,
-        target: ['es2015'],
-    },
     optimizeDeps: {
         exclude: ['@roxi/routify'],
     },
