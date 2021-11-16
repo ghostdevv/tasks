@@ -20,6 +20,8 @@
         };
 
         open = false;
+        name = '';
+        description = '';
 
         createTask(task);
     }
