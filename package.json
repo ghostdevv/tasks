@@ -35,7 +35,7 @@
         "svelte-hotkeys": "^0.1.1",
         "svelte-local-storage-store": "^0.2.3",
         "svelte-preprocess": "^4.7.0",
-        "vite": "^2.0.5",
+        "vite": "^2.9.13",
         "vite-plugin-pwa": "^0.9.3"
     }
 }
