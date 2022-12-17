@@ -26,7 +26,7 @@
         "polykit": "^0.0.1-5",
         "postcss": "^8.2.8",
         "postcss-import": "^14.0.0",
-        "pwa-asset-generator": "^4.3.3",
+        "pwa-asset-generator": "^6.2.0",
         "sass": "^1.32.8",
         "spank": "^1.5.0",
         "spassr": "^2.4.1-0",
